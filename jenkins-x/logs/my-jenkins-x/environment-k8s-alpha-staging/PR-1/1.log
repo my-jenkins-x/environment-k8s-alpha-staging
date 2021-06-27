@@ -1,0 +1,40 @@
+
+Showing logs for build [32mmy-jenkins-x-environment-k8s-al-5g7jr-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1624811160.9187458,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mmy-jenkins-x-environment-k8s-al-5g7jr-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mmy-jenkins-x-environment-k8s-al-5g7jr-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mmy-jenkins-x-environment-k8s-al-5g7jr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-workspace-xbzzf[0m
+{"level":"info","ts":1624811167.2763531,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/my-jenkins-x/environment-k8s-alpha-staging.git @ master in path /workspace/source"}
+{"level":"warn","ts":1624811167.2767546,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1624811167.3792064,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mmy-jenkins-x-environment-k8s-al-5g7jr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mmy-jenkins-x-environment-k8s-al-5g7jr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:55d6ea00f23fd02f84a6e91692158a3ac6c5a08b,1:c345ae8e9d553fa0e7925336646e77dcc2ae89c2
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow c345ae8e9d553fa0e7925336646e77dcc2ae89c2: 55d6ea00f23fd02f84a6e91692158a3ac6c5a08b:
+DEBUG: ran git fetch --unshallow origin c345ae8e9d553fa0e7925336646e77dcc2ae89c2: 55d6ea00f23fd02f84a6e91692158a3ac6c5a08b: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 55d6ea00f23fd02f84a6e91692158a3ac6c5a08b
+DEBUG: ran git reset --hard 55d6ea00f23fd02f84a6e91692158a3ac6c5a08b in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge c345ae8e9d553fa0e7925336646e77dcc2ae89c2
+DEBUG: ran git merge c345ae8e9d553fa0e7925336646e77dcc2ae89c2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 55d6ea00f23fd02f84a6e91692158a3ac6c5a08b..HEAD
+Merged SHA c345ae8e9d553fa0e7925336646e77dcc2ae89c2 with commit message 'chore: Promote sample-golang-http to version 0.0.1' into base branch master
+
+Showing logs for build [32mmy-jenkins-x-environment-k8s-al-5g7jr-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
